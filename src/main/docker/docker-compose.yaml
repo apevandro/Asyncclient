@@ -13,5 +13,5 @@ services:
     image: amazon/aws-cli:2.1.28
     container_name: aws-cli
     depends_on:
-      - dynamodb-local
+      - dynamodb
     command: "aws dynamodb create-table --endpoint-url http://localhost:8000 --region sa-east-1 --table-name tb_product --attribute-definitions AttributeName=id,AttributeType=S --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5"

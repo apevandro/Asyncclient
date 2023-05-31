@@ -1,9 +1,43 @@
-# Getting Started
+# Introduction
 
-### Reference Documentation
-For further reference, please consider the following sections:
+Dynamodb async client; Spring Webflux framework usage and creation of reactive REST API; 
+Flux and Mono asynchronous sequence API.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.3/maven-plugin/reference/html/#build-image)
+# Docker
 
+cd src/main/docker
+docker-compose up -d
+
+# Build and Test
+
+
+``` Linux BASH ```
+
+mvnw clean test    (run unit tests)
+
+mvnw clean verify  (run unit tests and build a JAR file)
+
+```
+
+
+``` Windows Environment ```
+
+mvnw.cmd clean test    (run unit tests)
+
+mvnw.cmd clean verify  (run unit tests and build a JAR file)
+
+```
+
+# API endpoint 
+
+http://localhost:8080/reactive/v1/product/
+
+
+# RequestBody example
+
+{
+   "product": {
+   "name": "cloud",
+   "brand": "aws"
+   }
+}
