@@ -6,6 +6,7 @@ Flux and Mono asynchronous sequence API.
 # Docker
 
 cd src/main/docker
+
 docker-compose up -d
 
 # Build and Test
